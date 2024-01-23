@@ -1,0 +1,7 @@
+C:\Users\brtlh\source\repos\StudentGradeSystem\StudentGradeSystem\bin\Debug\StudentGradeSystem.exe.config
+C:\Users\brtlh\source\repos\StudentGradeSystem\StudentGradeSystem\bin\Debug\StudentGradeSystem.exe
+C:\Users\brtlh\source\repos\StudentGradeSystem\StudentGradeSystem\bin\Debug\StudentGradeSystem.pdb
+C:\Users\brtlh\source\repos\StudentGradeSystem\StudentGradeSystem\obj\Debug\StudentGradeSystem.csproj.AssemblyReference.cache
+C:\Users\brtlh\source\repos\StudentGradeSystem\StudentGradeSystem\obj\Debug\StudentGradeSystem.csproj.CoreCompileInputs.cache
+C:\Users\brtlh\source\repos\StudentGradeSystem\StudentGradeSystem\obj\Debug\StudentGradeSystem.exe
+C:\Users\brtlh\source\repos\StudentGradeSystem\StudentGradeSystem\obj\Debug\StudentGradeSystem.pdb
