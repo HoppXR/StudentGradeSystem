@@ -9,6 +9,7 @@ namespace StudentGradeSystem
     class StudentGradeSystem
     {
         private List<Student> students = new List<Student>();
+        private List<Course> courses = new List<Course>();
 
         public StudentGradeSystem()
         {
@@ -39,13 +40,11 @@ namespace StudentGradeSystem
         }
     }
 
-    class Grade
-    {
-
-    }
-
     class Course
     {
-
+        public Course(string name) 
+        {
+        
+        }
     }
 }
