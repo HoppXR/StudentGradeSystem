@@ -6,45 +6,60 @@ using System.Threading.Tasks;
 
 namespace StudentGradeSystem
 {
-    class StudentGradeSystem
+    class Program
     {
-        private List<Student> students = new List<Student>();
-        private List<Course> courses = new List<Course>();
-
-        public StudentGradeSystem()
+        static void Main(string[] args)
         {
-            students.Add(new Student("Joe"));
-        }
+            Student studentSystem = new Student("Student Grade Database");
+            
+            Console.Title = "Student Grade System";
+            Console.ForegroundColor = ConsoleColor.Green;
 
-        public void CheckGradeSystem()
-        {
+            Console.WriteLine($"Welcome to the {studentSystem.GetName()} What would you like to do? \n" +
+                "ADD, DROP, ");
+            string input = Console.ReadLine()?.ToUpper();
 
-        }
-        
-        public void AddStudent()
-        {
+            switch (input)
+            {
+                case "ADD":
+                    Console.Clear();
+                    
+                    Console.WriteLine("Enter a name");
 
-        }
+                    break;
+                case "DROP":
+                    Console.Clear();
+                    break;
+            }
 
-        public void RemoveStudent()
-        {
-
+            Console.ReadKey();
         }
     }
 
     class Student
     {
+        private List<Student> students = new List<Student>();
+        private string Name;
+
         public Student(string name)
         {
-
+            students.Add(new Student("Joe"));
+            students.Add(new Student("Dave"));
         }
-    }
 
-    class Course
-    {
-        public Course(string name) 
+        public void CheckStudents()
         {
-        
+            Console.WriteLine("***** Current Students *****");
+
+            foreach (Student student in students) 
+            {
+                Console.WriteLine(student.GetName());
+            }
+        }
+
+        public string GetName() 
+        {
+            return Name;
         }
     }
 }
