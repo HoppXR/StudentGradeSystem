@@ -6,60 +6,111 @@ using System.Threading.Tasks;
 
 namespace StudentGradeSystem
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Student studentSystem = new Student("Student Grade Database");
-            
-            Console.Title = "Student Grade System";
-            Console.ForegroundColor = ConsoleColor.Green;
-
-            Console.WriteLine($"Welcome to the {studentSystem.GetName()} What would you like to do? \n" +
-                "ADD, DROP, ");
-            string input = Console.ReadLine()?.ToUpper();
-
-            switch (input)
-            {
-                case "ADD":
-                    Console.Clear();
-                    
-                    Console.WriteLine("Enter a name");
-
-                    break;
-                case "DROP":
-                    Console.Clear();
-                    break;
-            }
-
-            Console.ReadKey();
-        }
-    }
-
     class Student
     {
-        private List<Student> students = new List<Student>();
-        private string Name;
+        private string _name;
+        private float _grade;
+        
+        private string GetName()
+        {
+            return _name;
+        }
+        
+        /*
+        private float GetGrade()
+        {
+            return _grade;
+        }
+        */
 
         public Student(string name)
         {
-            students.Add(new Student("Joe"));
-            students.Add(new Student("Dave"));
+            _name = name;
+            Console.WriteLine(name + " has been Enrolled");
+        }
+    }
+
+    class Course
+    {
+        private string _name;
+
+        private string GetName()
+        {
+            return _name;
         }
 
-        public void CheckStudents()
+        public Course(string name)
         {
-            Console.WriteLine("***** Current Students *****");
-
-            foreach (Student student in students) 
+            _name = name;
+            Console.WriteLine(name + " has been Chosen");
+        }
+    }
+    
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Clear();
+            bool inMenu = true;
+            while (inMenu)
             {
-                Console.WriteLine(student.GetName());
-            }
-        }
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("What do you want to do? \n" +
+                                  "\"Enroll\" or \"Check Grade\" or \"Exit\"");
+                Console.ForegroundColor = ConsoleColor.White;
+                string input = Console.ReadLine();
+            
+                switch (input)
+                { 
+                    case "Enroll": 
+                        Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.Green; 
+                        Console.WriteLine("///// Enter the Students full name /////"); 
+                        Console.ForegroundColor = ConsoleColor.White;
+                        string name = Console.ReadLine();
+                        Student student = new Student(name);
+                        
+                        Console.ForegroundColor = ConsoleColor.Green; 
+                        Console.WriteLine("///// Enter course name /////");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        string courseName = Console.ReadLine();
+                        Course course = new Course(courseName);
 
-        public string GetName() 
-        {
-            return Name;
+                        int aGrade, qGrade, eGrade;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("///// Enter Assignment Grade /////");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        int.TryParse(Console.ReadLine(), out aGrade);
+                        
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("///// Enter Quiz Grade /////");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        int.TryParse(Console.ReadLine(), out qGrade);
+                        
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("///// Enter Exam Grade /////");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        int.TryParse(Console.ReadLine(), out eGrade);
+                        break;
+                    case "Check Grade":
+                        double aFinal = aGrade * 0.4;
+                        double qFinal = qGrade * 0.3;
+                        double eFinal = eGrade * 0.3;
+                        
+                        
+                        Console.WriteLine("The final mark is ");
+                        
+                        Console.Clear();
+                    
+                        break;
+                    case "Exit":
+                        inMenu = false;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid choice");
+                        break;
+                }
+            }
         }
     }
 }

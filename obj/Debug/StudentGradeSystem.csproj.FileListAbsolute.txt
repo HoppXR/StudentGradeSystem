@@ -5,3 +5,10 @@ C:\Users\brtlh\source\repos\StudentGradeSystem\StudentGradeSystem\obj\Debug\Stud
 C:\Users\brtlh\source\repos\StudentGradeSystem\StudentGradeSystem\obj\Debug\StudentGradeSystem.csproj.CoreCompileInputs.cache
 C:\Users\brtlh\source\repos\StudentGradeSystem\StudentGradeSystem\obj\Debug\StudentGradeSystem.exe
 C:\Users\brtlh\source\repos\StudentGradeSystem\StudentGradeSystem\obj\Debug\StudentGradeSystem.pdb
+C:\Unity Projects\StudentGradeSystem\bin\Debug\StudentGradeSystem.exe.config
+C:\Unity Projects\StudentGradeSystem\bin\Debug\StudentGradeSystem.exe
+C:\Unity Projects\StudentGradeSystem\bin\Debug\StudentGradeSystem.pdb
+C:\Unity Projects\StudentGradeSystem\obj\Debug\StudentGradeSystem.csproj.AssemblyReference.cache
+C:\Unity Projects\StudentGradeSystem\obj\Debug\StudentGradeSystem.csproj.CoreCompileInputs.cache
+C:\Unity Projects\StudentGradeSystem\obj\Debug\StudentGradeSystem.exe
+C:\Unity Projects\StudentGradeSystem\obj\Debug\StudentGradeSystem.pdb
